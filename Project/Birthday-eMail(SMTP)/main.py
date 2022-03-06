@@ -21,15 +21,15 @@ def find_letter(name):
 
 
 def sending_email(context):
-    my_email = "ptesting977@gmail.com"
-    password = "Qpzm9099099"
+    my_email = "abc@gmail.com"
+    password = "Password"
     message = context
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
 
         connection.sendmail(from_addr=my_email,
-                            to_addrs="tledmund0921@gmail.com", msg=f"Subject:Happy Birthday\n\n{message}")
+                            to_addrs="abc@gmail.com", msg=f"Subject:Happy Birthday\n\n{message}")
 
     connection.close()
 
