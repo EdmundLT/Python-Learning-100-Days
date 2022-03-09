@@ -79,3 +79,20 @@ A **and** B
 C **or** D
 
 **not** E
+
+Random Module
+-----------------------
+import random
+
+1. random.randint(a, b) = random int between a&b (including a&b)
+2. random.random() = create a flout between 0.0 - 1.0
+3. random.random() * 5 = 0-4.99999999
+
+List Data Structure
+--------------------------
+1. Saving data in Python
+2. variables = single data
+
+List
+fruit = [item1, item2]
+print(fruit[0])
