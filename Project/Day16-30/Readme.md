@@ -28,7 +28,7 @@ Dictionary are pair of **key** : **value**.
 1 value with 1 key
 
 Dictionary similar to a **table**:
-____________________
+
 | KEY   |   Value  |
 
 
