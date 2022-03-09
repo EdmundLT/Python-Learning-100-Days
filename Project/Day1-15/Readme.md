@@ -53,4 +53,6 @@ if answer == "n":
 
 #can convert to
 if input(”type ‘y’ or ‘n’ to change condition.”) = n:
+
 	condition = False
+
