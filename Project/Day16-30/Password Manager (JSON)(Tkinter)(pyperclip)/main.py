@@ -1,4 +1,3 @@
-from cgitb import text
 from email import message
 from tkinter import messagebox
 from tkinter import *
