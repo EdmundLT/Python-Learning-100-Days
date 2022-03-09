@@ -56,3 +56,18 @@ if input(”type ‘y’ or ‘n’ to change condition.”) = n:
 
 	condition = False
 
+Nest "IF" Condition
+---------------
+if(xxxxxx):
+
+if(xxxxxx):
+
+do this
+
+else:
+
+do that
+
+else:
+
+do that
