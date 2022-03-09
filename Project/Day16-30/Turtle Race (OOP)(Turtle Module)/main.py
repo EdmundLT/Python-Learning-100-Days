@@ -1,6 +1,5 @@
 from turtle import Turtle, Screen
 import random
-from xml.etree.ElementPath import get_parent_map
 from data import colours
 import turtle
 
