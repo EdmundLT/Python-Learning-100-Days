@@ -71,3 +71,11 @@ do that
 else:
 
 do that
+
+Logical Operator
+------------------------
+A **and** B
+
+C **or** D
+
+**not** E
