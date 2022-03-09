@@ -39,10 +39,15 @@ if true:
 	#result would be false
 
 condition = True
+
 answer = input(”type ‘y’ or ‘n’ to change conditions.”)
-if answer == “y”:
+
+if answer == "y":
+
 	condition = True
-if answer == “n”:
+
+if answer == "n":
+
 	condition = False
 
 
