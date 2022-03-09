@@ -22,7 +22,7 @@ Proeject List in order by Learning Day:
 Concepts Used in Day16 - Day30
 --------------------------------
 
-Dictionary
+1 Dictionary
 ---------------
 Dictionary are pair of **key** : **value**.
 1 value with 1 key
@@ -39,7 +39,7 @@ Dictionary similar to a **table**:
 {"China": "Beijing"}
 ```
 
-**Dictionary save in a *list* **
+2 Dictionary save in a *list* 
 ------------------
 ```
 capital_list = {
@@ -51,22 +51,22 @@ capital_list = {
 print(capital_list["China"])
 Output: Beijing
 ```
-**How to add a new key into dictionary**
+3 **How to add a new key into dictionary**
 ------------------
 ```
 capital_list["UK"] = "London"
 ```
-**Wipe Dictionary**
+4 **Wipe Dictionary**
 ------------------
 ```
 capital_list = {}
 ```
-**Edit item in dictionary**
+5 **Edit item in dictionary**
 ------------------
 ```
 capital_list["key 1"] = "value 1"
 ```
-**loop a dictionary**
+6 **loop a dictionary**
 ------------------
 ```
 for key in capital_list:
@@ -81,7 +81,7 @@ USA
 Washington
 -----------
 ```
-**Fucntion with input**
+7 **Fucntion with input**
 ------------------
 ```
 def function(input):
@@ -92,7 +92,7 @@ function(123)
 output:
 123
 
-**Function with output**
+8 **Function with output**
 ------------------
 ```
 def add(n1, n2):
@@ -105,12 +105,12 @@ output
 
 We can use **return** to save variables inside function
 
-**Recursion**
+9 **Recursion**
 ------------------
 call function inside the fucntion based on some conditions:
 1. while loop with boolean (value of boolean in condition is useful)
 
-**Scope**
+10 **Scope**
 -------------------
 ```
 x = 1
@@ -144,7 +144,7 @@ def x_increase():
 	print(x)
 x_increase() ## x = 2
 ```
-**O**bject **O**riented **P**rogramming - OOP
+11 **O**bject **O**riented **P**rogramming - OOP
 ---------------------------------------------
 [Python OOP.pdf](https://github.com/EdmundLT/U-Python-100-Days/files/8218832/Python.OOP.pdf)
 
@@ -170,7 +170,7 @@ user_1.follow(user_2)
 print(user_1.followers)
 print(user_2.followers)
 ```
-Module
+12 Module
 ----------------------
 **Import Module**
 ```
@@ -187,7 +187,7 @@ for object in range(6):
 	new_object_list.append(new_object)
 ```
 
-Reverse Range
+13 Reverse Range
 ---------------------
 ```
 for x in range(start= 5, stop= 0, step= 1)
@@ -199,7 +199,7 @@ x = 2
 x = 1
 x = 0
 ```
-Class Inheritance
+14 Class Inheritance
 -----------------------
 For example
 ```
@@ -222,7 +222,7 @@ print(a.num_eyes)
 output
 2
 ```
-Slicing List & Tuple (Important)
+15 Slicing List & Tuple (Important)
 ------------------------
 ```
 piano_keys = [#0 a, #1 b, #2 c,#3 d,#4 e,#5 f,#6 g #7]
@@ -249,7 +249,7 @@ print(piano_keys[::-1]) #<---- -1 = reverse
 #[g, f, e, d, c, b, a]
 ```
 
-File of Python
+16 File of Python
 -----------------------
 ```
 open(”xxx”):
@@ -274,7 +274,7 @@ with open("my_file.txt", mode="a"):
 with open("new_file.txt", mode="w"): 
 	file.write("abc")
 ```
-Read CSV Files
+17 Read CSV Files
 -------------------------------
 ```
 import csv
@@ -283,7 +283,7 @@ with open("weather_data.csv") as data_files:
     for row in data:
         print(row)
 ```
-Python Pandas
+18 Python Pandas
 --------------------------------
 Pandas Documentation: https://pandas.pydata.org/docs/reference/index.html
 
@@ -302,7 +302,7 @@ maxtem = data.temp.max()
 #data in row
 print(data[data.temp == maxtem])
 ```
-Python Pandas create Dataframe from scratch
+19 Python Pandas create Dataframe from scratch
 ------------------------------
 **create data frame from scratch**
 ```
@@ -320,7 +320,7 @@ print(data)
 data = pandas.DataFrame(data_dict)
 data.to_csv("new_data.csv")
 ```
-Pandas scratch data (NY Park)
+20 Pandas scratch data (NY Park)
 ---------------------------------
 ```
 import pandas
