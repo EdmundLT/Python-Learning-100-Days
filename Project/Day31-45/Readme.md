@@ -19,7 +19,7 @@ Proeject List in order by Learning Day:
 Concepts Used in Day31 - Day45
 --------------------------------
 
-Comprehension
+1 Comprehension
 ---------------------
 **LIST**
 ```
@@ -103,7 +103,7 @@ weather_f = {day: ((value * 9/5) + 32) for (day, value) in weather_c.items()}
 
 print(weather_f)
 ```
-Pandas with Dictionary
+2 Pandas with Dictionary
 ------------------------
 ```
 import pandas
@@ -140,7 +140,7 @@ data = pd.read_csv(
 
 dict = {row.letter: row.code for (index, row) in data.iterrows()}
 ```
-GUI Tkinter
+3 GUI Tkinter
 ---------------------
 ```
 from tkinter import *
@@ -270,7 +270,7 @@ canvas.create_image(103, 112, image=tomato)
 canvas.create_text(103, 130, text="00: 00", font=(FONT_NAME, 35, "bold"))
 canvas.pack()
 ```
-Advance Keyword Arguement
+4 Advance Keyword Arguement
 --------------------------
 ```
 def function(a=5, b=6, c=7)
@@ -286,7 +286,7 @@ def add(*args):
         result += n
     print(result)
 ```
-Python Dynamic Typing
+5 Python Dynamic Typing
 -----------------------
 python strongly type and hold on, but dynamic type = dynamic change the type instantly
 ```
@@ -294,7 +294,7 @@ a = "abc" ##type = string
 a = 4 ##type changed to Int
 ```
 
-Try & Error
+6 Try & Error
 -----------------------
 1. try
 2. except
@@ -337,7 +337,7 @@ for post in facebook_posts:
 
 print(total_likes)
 ```
-Saving JSON Data （javaScriptObjectNotation)
+7 Saving JSON Data （javaScriptObjectNotation)
 -------------------------
 ```
 json.dump() # Write
@@ -345,7 +345,7 @@ json.load() # Read
 json.update() # Update
 ```
 
-SMTP
+8 SMTP
 -----------------------
 ```
 import smtplib
@@ -361,7 +361,7 @@ connection.sendmail(from_addr=my_email,
 
 connection.close()
 ```
-Datetime Module
+9 Datetime Module
 -------------------
 ```
 import datetime as dt
@@ -413,7 +413,7 @@ today = datetime.now()
 
 yyyymmdd = today.strftime("%Y%m%d")
 ```
-API
+10 API
 ----------
 set of commands, functions, protocols, and objects that programmer can use.
 
@@ -470,14 +470,14 @@ print(sunset)
 time_now = datetime.now()
 print(time_now.hour)
 ```
-HTML Escape
+11 HTML Escape
 -----------
 ```
 import html
 
 html.unescape()
 ```
-API Authentication
+12 API Authentication
 -----------------------
 **API KEY**
 ```
@@ -496,7 +496,7 @@ response = requests.get(url=api, params=weather_params)
 response.raise_for_status()
 ```
 
-Environment Variables
+13 Environment Variables
 ---------------------
 for Convenience, security (dont save API Keys on web)
 
@@ -510,7 +510,7 @@ save the important variables such as API KEY...etc to environment
 
 and use os.environ.get(””) to get them
 ```
-HTTP POST REQUEST
+14 HTTP POST REQUEST
 --------------------
 ```
 import requests
@@ -529,7 +529,7 @@ response = requests.post(
     url=graph_endpoint, json=graph_config, headers=headers)
 ```
 
-Beautiful Soup
+15 Beautiful Soup
 ---------------
 ```
 from bs4 import BeautifulSoup
