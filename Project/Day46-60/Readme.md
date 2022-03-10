@@ -3,17 +3,12 @@
 
 Proeject List in order by Learning Day:
 
-1. Flashy(Tkinter)(Pandas)
-2. Birthday Mail sending (SMTP Library)
-3. ISS Program (API)
-4. Quiz Game (API)
-5. Rain Alert SMS Program (API)
-6. Stock Monitoring SMS Alert Program (API)
-7. Pixela (API)
-8. Google sheet workout tracker (API)
-9. Flight Club (Capstone)
-10. Scrapping Top 100 Movie (BeautifulSoup)
-
+1. Scrapping Billboard Top 100 to Spotify(BeautifulSoup)(Spotipy)
+2. Scrapping Amazon Price Python Bot(Scrapping)
+3. Instagram Auto Follow Bot (Scrapping)
+4. Higher Lower (Flask)
+5. name-card (flask)
+6. Blog Capstone Project Part1
 
 
 Concepts Used in Day46 - Day60
