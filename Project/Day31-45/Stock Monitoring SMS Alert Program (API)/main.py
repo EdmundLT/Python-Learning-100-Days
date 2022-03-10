@@ -22,7 +22,7 @@ COMPANY_NAME = "Palantir"
 
 # STEP 1: Use https://www.alphavantage.co
 # When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
-alpha_api_key = "KQUWJE2YFL4XGJ4W"
+alpha_api_key = "AB123CD456DE678"
 api_endpoint = "https://www.alphavantage.co/query"
 params = {
     "function": "TIME_SERIES_DAILY",
