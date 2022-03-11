@@ -381,3 +381,31 @@ def a_function(*args):
 
 a_function(1, 2, 3)
 ```
+Nested Fucntions
+-----
+```
+def outer_function():
+	print("Outer")
+	def inner_fucntion():
+		print("Inner")
+	innter_function()
+```
+**return function in function**
+```
+def outer_function():
+	print("Outer")
+	def inner_fucntion():
+		print("Inner")
+	return inner_function
+
+inner_function = outer_function()
+inner_function()
+```
+OUTPUT:
+Outer
+Inner
+
+![image](https://user-images.githubusercontent.com/98913678/157964258-e3868826-8ec2-4c8f-92b4-7dd77c00c311.png)
+
+
+
