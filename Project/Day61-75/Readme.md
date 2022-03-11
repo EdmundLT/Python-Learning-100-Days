@@ -9,3 +9,4 @@ Proeject List in order by Learning Day:
 5. Top-100 Movie Website(HTML)(WTF-form)(Flask)(Bootstrap)(SQLite)(SQLAlchemy)
 6. Cafe & Wifi Project(Building RESTful API)(SQL)(Flask)
 7. RESTful blog
+8. Authentication (Flask)
