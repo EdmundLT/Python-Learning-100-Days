@@ -98,3 +98,12 @@ cursor = db.cursor()
 
 cursor.execute("CREATE TABLE books (id INTEGER PRIMARY KEY, title varchar(250) NOT NULL UNIQUE, author varchar(250) NOT NULL, rating FLOAT NOT NULL)")
 ```
+![image](https://user-images.githubusercontent.com/98913678/157965393-a0366d73-10fc-4cff-8487-8a023a18d2b6.png)
+![image](https://user-images.githubusercontent.com/98913678/157965458-acbcb5dd-8eb4-4f1f-bc79-4f33ba1c7bc4.png)
+
+**New Entry**
+```
+cursor.execute(
+    "INSERT INTO books VALUES(1, 'Harry Potter', 'J. K. Rowling', '9.3')")
+db.commit()
+```
