@@ -1,9 +1,9 @@
-# Project 
+# Project
+
 Hello! Welcome to my project list. These project are based on 100 Days of Code (Python) from Udemy.
 
+## Project list: (from old to new)
 
-Project list: (from old to new)
------------------------
 1. Tip Calculator
 2. Treasure island
 3. Rock Paper Scissor
@@ -50,3 +50,4 @@ Project list: (from old to new)
 44. Library(HTML)(SQLite)
 45. Top-100 Movie Website(HTML)(WTF-form)(Flask)(Bootstrap)(SQLite)(SQLAlchemy)
 46. Cafe & Wifi Project(Building RESTful API)(SQL)(Flask)
+47. RESTful blog
