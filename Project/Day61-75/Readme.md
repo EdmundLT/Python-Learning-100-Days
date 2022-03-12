@@ -10,6 +10,7 @@ Proeject List in order by Learning Day:
 6. Cafe & Wifi Project(Building RESTful API)(SQL)(Flask)
 7. RESTful blog
 8. Authentication (Flask)
+9. Blog-with-users (Capstone Project)
 
 ## Concepts Used in Day46 - Day60
 
