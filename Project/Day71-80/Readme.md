@@ -6,7 +6,7 @@ Proeject List in order by Learning Day:
 
 ## Concepts Used in Day71 - Day80
 
-## Ipynb (Google Colaboratory)
+## Ipynb (Google Colaboratory) using pandas Day 1
 
 ```
 import pandas as pd
@@ -77,7 +77,7 @@ formatting
 pd.options.display.float_format = '{:,.2f}'.format
 
 
-## Summary
+## Summary of Day 1
 1. Use .head(), .tail(), .shape and .columns to explore your DataFrame and find out the number of rows and columns as well as the column names.
 
 2. Look for NaN (not a number) values with .findna() and consider using .dropna() to clean up your DataFrame.
@@ -93,7 +93,11 @@ pd.options.display.float_format = '{:,.2f}'.format
 7. To create an Excel Style Pivot Table by grouping entries that belong to a particular category use the .groupby() method
 
 
-## .pivot()
+## Ipynb (Google Colaboratory) using pandas Day 2
+**.pivot()**
+Use this CSV as example:
+[QueryResults.csv](https://github.com/EdmundLT/U-Python-100-Days/files/8247393/QueryResults.csv)
+
 ![image](https://user-images.githubusercontent.com/98913678/158230297-ff993a20-6097-40e9-948e-28e82005ce0a.png)
 ```
 import pandas as pd
@@ -131,4 +135,63 @@ plt.plot(reshaped_df.index, reshaped_df["java"])
 ```
 <img width="393" alt="Screenshot 2022-03-14 at 1 54 44 PM" src="https://user-images.githubusercontent.com/98913678/158232203-45d39d10-be9a-422b-ac61-bead38dee261.png">
 
+**Styling the Chart/Figure**
 
+.figure() - allows us to resize our chart
+
+.xticks() - configures our x-axis
+
+.yticks() - configures our y-axis
+
+.xlabel() - add text to the x-axis
+
+.ylabel() - add text to the y-axis
+
+.ylim() - allows us to set a lower and upper bound
+
+```
+plt.figure(figsize=(16,10))
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.xlabel('Date', fontsize=14)
+plt.ylabel('Num of Posts', fontsize=14)
+plt.ylim(0, 35000)
+plt.plot(reshaped_df.index, reshaped_df["java"])
+```
+<img width="866" alt="image" src="https://user-images.githubusercontent.com/98913678/158233603-12ded080-43b1-4510-80c2-20bd30ea4926.png">
+
+**Multi line in 1 graph**
+```
+for col in reshaped_df.columns:
+  plt.plot(reshaped_df.index, reshaped_df[col], linewidth=2, label=reshaped_df[col].name)
+plt.legend(fontsize=16)
+```
+<img width="859" alt="Screenshot 2022-03-14 at 2 08 02 PM" src="https://user-images.githubusercontent.com/98913678/158234249-1be9faee-37df-49bd-96bb-916fa420ee6e.png">
+
+**smooth line**
+We can use .rolling() and .mean() method to make all lines smoother.
+```
+roll_df = reshaped_df.rolling(window=6).mean()
+plt.figure(figsize=(16,10))
+plt.xticks(fontsize=14)
+plt.yticks(fontsize=14)
+plt.xlabel('Date', fontsize=14)
+plt.ylabel('Num of Posts', fontsize=14)
+plt.ylim(0, 35000)
+for col in roll_df.columns:
+  plt.plot(roll_df.index, roll_df[col], linewidth=2, label=roll_df[col].name)
+plt.legend(fontsize=16)
+```
+![image](https://user-images.githubusercontent.com/98913678/158234634-cbaa6611-514d-4593-b1e3-bd888e621c97.png)
+
+## Summary for Day 2
+Congratulations on completing another challenging data science project! Today we've seen how to grab some raw data and create some interesting charts using Pandas and Matplotlib. We've
+
+1. used .groupby() to explore the number of posts and entries per programming language
+2. converted strings to Datetime objects with to_datetime() for easier plotting
+3. reshaped our DataFrame by converting categories to columns using .pivot()
+4. used .count() and isna().values.any() to look for NaN values in our DataFrame, which we then replaced using .fillna()
+5. created (multiple) line charts using .plot() with a for-loop
+6. styled our charts by changing the size, the labels, and the upper and lower bounds of our axis.
+7. added a legend to tell apart which line is which by colour
+8. smoothed out our time-series observations with .rolling().mean() and plotted them to better identify trends over time.
