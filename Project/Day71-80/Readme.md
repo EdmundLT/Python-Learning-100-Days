@@ -92,3 +92,43 @@ pd.options.display.float_format = '{:,.2f}'.format
 
 7. To create an Excel Style Pivot Table by grouping entries that belong to a particular category use the .groupby() method
 
+
+## .pivot()
+![image](https://user-images.githubusercontent.com/98913678/158230297-ff993a20-6097-40e9-948e-28e82005ce0a.png)
+```
+import pandas as pd
+df = pd.read_csv("QueryResults.csv", names=['DATE', 'TAG', 'POSTS'], header=0)
+df.DATE = pd.to_datetime(df.DATE)
+reshaped_df = df.pivot(index='DATE', columns='TAG', values='POSTS')
+reshaped_df.head()
+```
+<img width="856" alt="image" src="https://user-images.githubusercontent.com/98913678/158231189-980c9da0-448b-4a8a-954d-8d77c70a2df2.png">
+
+**Why there are "NaN Value"?**
+
+use .isna() to find "NaN"
+
+```
+reshaped_df.fillna(0, inplace=True) 
+```
+<img width="868" alt="image" src="https://user-images.githubusercontent.com/98913678/158231500-906e7f99-2399-4ed9-a458-55235f6b909d.png">
+
+## Metplotlib
+To create our first charts we're going to use a library called Matplotlib. There are many different libraries in Python to help us create charts and graphs. Matplotlib is an incredibly popular one and it works beautifully in combination with Pandas, so let's check it out.
+
+```
+import matplotlib.pyplot as plt
+```
+**.plot()** https://matplotlib.org/3.2.1/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv("QueryResults.csv", names=['DATE', 'TAG', 'POSTS'], header=0)
+df.DATE = pd.to_datetime(df.DATE)
+reshaped_df = df.pivot(index='DATE', columns='TAG', values='POSTS')
+reshaped_df.fillna(0, inplace=True) 
+plt.plot(reshaped_df.index, reshaped_df["java"])
+```
+<img width="393" alt="Screenshot 2022-03-14 at 1 54 44 PM" src="https://user-images.githubusercontent.com/98913678/158232203-45d39d10-be9a-422b-ac61-bead38dee261.png">
+
+
