@@ -2,7 +2,7 @@
 
 Proeject List in order by Learning Day:
 
-1.
+1.Ipynb (Google Colaboratory) using pandas
 
 ## Concepts Used in Day71 - Day80
 
