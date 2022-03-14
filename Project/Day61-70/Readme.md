@@ -1,4 +1,4 @@
-## #This is all project from Day61 - Day75
+## #This is all project from Day61 - Day70
 
 Proeject List in order by Learning Day:
 
@@ -12,7 +12,7 @@ Proeject List in order by Learning Day:
 8. Authentication (Flask)
 9. Blog-with-users (Capstone Project)
 
-## Concepts Used in Day46 - Day60
+## Concepts Used in Day61 - Day70
 
 ## Jinja
 
