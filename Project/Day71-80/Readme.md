@@ -6,7 +6,7 @@ Proeject List in order by Learning Day:
 
 ## Concepts Used in Day71 - Day80
 
-## Ipynb (Google Colaboratory) using pandas Day 1
+## Ipynb (Google Colaboratory) using pandas Day 71
 
 ```
 import pandas as pd
@@ -77,7 +77,7 @@ formatting
 pd.options.display.float_format = '{:,.2f}'.format
 
 
-## Summary of Day 1
+## Summary of Day 71
 1. Use .head(), .tail(), .shape and .columns to explore your DataFrame and find out the number of rows and columns as well as the column names.
 
 2. Look for NaN (not a number) values with .findna() and consider using .dropna() to clean up your DataFrame.
@@ -93,7 +93,7 @@ pd.options.display.float_format = '{:,.2f}'.format
 7. To create an Excel Style Pivot Table by grouping entries that belong to a particular category use the .groupby() method
 
 
-## Ipynb (Google Colaboratory) using pandas Day 2
+## Ipynb (Google Colaboratory) using pandas Day 72
 **.pivot()**
 Use this CSV as example:
 [QueryResults.csv](https://github.com/EdmundLT/U-Python-100-Days/files/8247393/QueryResults.csv)
@@ -184,7 +184,7 @@ plt.legend(fontsize=16)
 ```
 ![image](https://user-images.githubusercontent.com/98913678/158234634-cbaa6611-514d-4593-b1e3-bd888e621c97.png)
 
-## Summary for Day 2
+## Summary for Day 72
 Congratulations on completing another challenging data science project! Today we've seen how to grab some raw data and create some interesting charts using Pandas and Matplotlib. We've
 
 1. used .groupby() to explore the number of posts and entries per programming language
@@ -195,3 +195,122 @@ Congratulations on completing another challenging data science project! Today we
 6. styled our charts by changing the size, the labels, and the upper and lower bounds of our axis.
 7. added a legend to tell apart which line is which by colour
 8. smoothed out our time-series observations with .rolling().mean() and plotted them to better identify trends over time.
+
+
+## Ipynb (Google Colaboratory) using pandas Day 73
+
+Data:
+[LEGO+Notebook+and+Data+(start).zip](https://github.com/EdmundLT/U-Python-100-Days/files/8247623/LEGO%2BNotebook%2Band%2BData%2B.start.zip)
+
+**.nunique()**
+DOC: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.nunique.html?highlight=nunique#pandas.DataFrame.nunique
+
+Count number of distinct elements in specified axis
+```
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("data/colors.csv")
+df['name'].nunique()
+```
+find how many colors are "is_trans"
+
+
+
+Method 1:
+```
+df.groupby('is_trans').count()
+```
+<img width="308" alt="Screenshot 2022-03-14 at 2 25 34 PM" src="https://user-images.githubusercontent.com/98913678/158236975-71fcf16b-bb88-4b1b-84af-f05b3a8e7485.png">
+
+Method 2:
+**.value_counts()**
+```
+df.is_trans.value_counts()
+```
+<img width="260" alt="Screenshot 2022-03-14 at 2 28 31 PM" src="https://user-images.githubusercontent.com/98913678/158237476-dacf06a7-3e88-4389-a3a6-d8b90c977b6a.png">
+
+## Lego Sets
+```
+sets_by_year = df.groupby('year').count()
+sets_by_year['set_num'].head()
+sets_by_year['set_num'].tail()
+plt.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2])
+```
+![image](https://user-images.githubusercontent.com/98913678/158239063-f3159553-d73f-423e-954b-5e72d66bb646.png)
+
+**.agg()**
+![image](https://user-images.githubusercontent.com/98913678/158239354-7eb19a10-28d9-43e7-9653-25a2918c4317.png)
+
+.agg() take **Dictionary** as an argument.
+
+**Create a line plot of the number of themes released year-on-year. Only include the full calendar years in the dataset (1949 to 2019).**
+
+```
+themes_by_year = df.groupby('year').agg({'theme_id': pd.Series.nunique})
+themes_by_year.rename(columns = {'theme_id': 'nr_themes'}, inplace = True)
+plt.plot(themes_by_year.index[:-2], themes_by_year.nr_themes[:-2])
+```
+![image](https://user-images.githubusercontent.com/98913678/158240146-7f5ac777-9fba-415d-a08b-74bed5826c12.png)
+
+**Combined graph**
+![image](https://user-images.githubusercontent.com/98913678/158240495-f0962e3b-1cc7-4a55-9c35-c59932a6fd66.png)
+
+sets by year are 0 - 90, but themes by year are from 0 - 900, how to balance it, make the graph easier to read?
+```
+ax1 = plt.gca() # get current axes
+ax2 = ax1.twinx() <- share same x axis using .twinx()
+
+ax1.plot(sets_by_year.index[:-2], sets_by_year.set_num[:-2])
+ax2.plot(themes_by_year.index[:-2], themes_by_year.nr_themes[:-2])
+
+#Styling
+ax1.set_xlabel('Year')
+ax1.set_ylabel('Number of Sets', color='red')
+ax2.set_ylabel('Number of Themes', color='green')
+```
+![image](https://user-images.githubusercontent.com/98913678/158241255-66034b50-93b8-43de-9747-e4d0cc07a7ca.png)
+
+**.scatter()**
+```
+parts_per_set = df.groupby('year').agg({'num_parts': pd.Series.mean})
+plt.scatter(parts_per_set.index[:-2], parts_per_set.num_parts[:-2])
+```
+![image](https://user-images.githubusercontent.com/98913678/158242213-b8e43dba-c675-441b-9501-20abcdda17d0.png)
+
+**Number of Sets per LEGO Theme**
+![image](https://user-images.githubusercontent.com/98913678/158242489-36bf07be-2f5b-4018-9043-aeaad4661bac.png)
+
+## database schema
+![image](https://user-images.githubusercontent.com/98913678/158243251-efc497e4-40fe-4673-8864-427fe0e14478.png)
+Search theme name "Star Wars"
+```
+themes = pd.read_csv('data/themes.csv')
+themes[themes.name == 'Star Wars']
+```
+<img width="257" alt="Screenshot 2022-03-14 at 3 07 03 PM" src="https://user-images.githubusercontent.com/98913678/158243348-8299feac-5bd0-45ef-86e4-abc8ac1b8c0a.png">
+
+**.merge()**
+```
+themes = pd.read_csv('data/themes.csv')
+sets = pd.read_csv("data/sets.csv")
+themes[themes.name == 'Star Wars']
+set_theme_count = df["theme_id"].value_counts()
+set_theme_count[:5]
+set_theme_count = pd.DataFrame({'id' :set_theme_count.index,
+                                'set_count' :set_theme_count.values})
+merged_df = pd.merge(set_theme_count, themes, on='id')
+
+#Styling
+plt.figure(figsize=(14, 8))
+plt.xticks(fontsize=14, rotation=45)
+plt.yticks(fontsize=14)
+plt.xlabel('Theme Name', fontsize=14)
+plt.ylabel('Nr of Sets', fontsize=14)
+plt.bar(merged_df.name[:10], merged_df.set_count[:10])
+```
+![image](https://user-images.githubusercontent.com/98913678/158245306-a8f822c4-01d9-4fa1-8c5e-d029efdd6275.png)
+
+## Learning Points & Summary of Day 73
+
+
