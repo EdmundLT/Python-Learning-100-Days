@@ -3,6 +3,8 @@
 Proeject List in order by Learning Day:
 
 1.Ipynb (Google Colaboratory) using pandas
+2. Google Trends Data Viz
+3. 
 
 ## Concepts Used in Day71 - Day80
 
@@ -336,3 +338,13 @@ work with tables in a relational database by using primary and foreign keys
 
 create a bar chart with Matplotlib
 
+## Learning Points & Summary of Day 74-75
+1. How to use .describe() to quickly see some descriptive statistics at a glance.
+2. How to use .resample() to make a time-series data comparable to another by changing the periodicity.
+3. How to work with matplotlib.dates Locators to better style a timeline (e.g., an axis on a chart).
+4. How to find the number of NaN values with .isna().values.sum()
+5. How to change the resolution of a chart using the figure's dpi
+6. How to create dashed '--' and dotted '-.' lines using linestyles
+7. How to use different kinds of markers (e.g., 'o' or '^') on charts.
+8. Fine-tuning the styling of Matplotlib charts by using limits, labels, linewidth and colours (both in the form of named colours and HEX codes).
+9. Using .grid() to help visually identify seasonality in a time series.
