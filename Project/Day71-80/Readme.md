@@ -2,7 +2,7 @@
 
 Proeject List in order by Learning Day:
 
-1.Ipynb (Google Colaboratory) using pandas
+1. Ipynb (Google Colaboratory) using pandas
 2. Google Trends Data Viz
 3. Google Play Store Project
 4. 
