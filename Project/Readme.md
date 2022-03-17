@@ -53,3 +53,6 @@ Hello! Welcome to my project list. These project are based on 100 Days of Code (
 47. RESTful blog
 48. Authentication (Flask)
 49. Blog-with-users (Capstone Project)
+50. Ipynb (Google Colaboratory) using pandas
+51. Google Trends Data Viz
+52. Google Play Store Project
