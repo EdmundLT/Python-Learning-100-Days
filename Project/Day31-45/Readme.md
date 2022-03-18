@@ -36,7 +36,7 @@ for x in numbers;
 **New Method**
 ```
 numbers = [1, 2, 3]
-new_list = [n + 1 for x in number]
+new_list = [n + 1 for n in number]
 
 name = "Angela"
 new_numbers = [n for n in numbers]
