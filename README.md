@@ -41,8 +41,6 @@ https://www.udemy.com/course/100-days-of-code
 7. Jinja (Backend WEB)
 8. SQLite (Backend WEB)
 9. Flask sqlalchemy (Backend WEB)
-10. 
-
 
 ## Important!! 
 As a newbie in this industry, my purpose is sharing my personal exp with you, commit it everyday as much as possible. So it feel free to clone this res.
