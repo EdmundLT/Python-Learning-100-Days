@@ -1,32 +1,45 @@
 from turtle import Turtle, Screen
 import random
-from data import colours
-import turtle
 
-my_screen = Screen()
-timmy = Turtle()
-timmy.shape("turtle")
-timmy.color("blue")
-timmy.speed("fastest")
-
-turtle.colormode(255)
+colors = ["red", "blue", "black", "grey", "brown", "yellow"]
+turtle_list = []
+is_race_on = False
 
 
-def random_color():
-    red = random.randint(0, 255)
-    green = random.randint(0, 255)
-    blue = random.randint(0, 255)
-    return (red, green, blue)
+def turtle_race():
+    user_bet = screen.textinput(
+        title="Make your bet", prompt="Which turtle will win the race? Enter a color: ")
+    color = 0
+    y = -80
+    for turtle in range(6):
+        new_turtle = Turtle()
+        new_turtle.color(colors[color])
+        new_turtle.shape("turtle")
+        new_turtle.pu()
+        new_turtle.goto(-200, y)
+        color += 1
+        y += 40
+        turtle_list.append(new_turtle)
+
+    if user_bet:
+        is_race_on = True
+
+    while is_race_on:
+        for turtle in turtle_list:
+            if turtle.xcor() > 230:
+                winning_color = turtle.pencolor()
+                if winning_color == user_bet:
+                    print(f"You are win. The {winning_color} turtle won.")
+                    is_race_on = False
+                else:
+                    print(f"You are lose. The {winning_color} turtle won.")
+                    is_race_on = False
+            ran_distance = random.randint(0, 10)
+            turtle.fd(ran_distance)
 
 
-def random_drawing():
-    heading = 0
-    for x in range(100):
-        timmy.pencolor(random_color())
-        timmy.circle(100)
-        heading += 5
-        timmy.setheading(heading)
+screen = Screen()
+screen.setup(500, 400)
+turtle_race()
 
-
-random_drawing()
-my_screen.exitonclick()
+screen.exitonclick()
