@@ -1,8 +1,11 @@
 # U-Python-100-Days (Updating 75/100)
 
 Hello guys! This is my Python learning progress from this course.
+
 Udemy 100 Days of Python
+
 https://www.udemy.com/course/100-days-of-code
+
 
 ## Concepts Included in this course
 
