@@ -1,6 +1,6 @@
 ## Instruction
 You need to finish something like this! (dont need exact same)
-![image](https://user-images.githubusercontent.com/98913678/158915022-364072a9-7edd-4198-9ea4-7d7cd3b26091.png)
+https://imgur.com/TfEbGou
 
 1. You can download the turtle-race-start.zip first.
 2. Read Turtle Text input Docs! https://docs.python.org/3.1/library/turtle.html#turtle.textinput
