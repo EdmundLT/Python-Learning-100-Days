@@ -4,6 +4,10 @@ Proeject List in order by Learning Day:
 
 1. Scrapping Billboard Top 100 to Spotify(BeautifulSoup)(Spotipy)
 2. Scrapping Amazon Price Python Bot(Scrapping)
+3. Cookie Clicker (Selenium)
+4. Linkedin Auto Apply (Scrapping)
+5. Tinder Auto Swipper (Scrapping)
+6. Auto Tweet my Network Speed (Scrapping)
 3. Instagram Auto Follow Bot (Scrapping)
 4. Zillow Scrapping
 5. Higher Lower (Flask)
