@@ -1,7 +1,7 @@
 ## Instruction
 You need to finish something like this! (dont need exact same)
 
-https://imgur.com/TfEbGou
+https://imgur.com/a/uVGFoqE
 
 1. You can download the turtle-race-start.zip first.
 2. Read Turtle Text input Docs! https://docs.python.org/3.1/library/turtle.html#turtle.textinput
