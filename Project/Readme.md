@@ -56,3 +56,4 @@ Hello! Welcome to my project list. These project are based on 100 Days of Code (
 50. Ipynb (Google Colaboratory) using pandas
 51. Google Trends Data Viz
 52. Google Play Store Project
+53. Computation with NumPy
