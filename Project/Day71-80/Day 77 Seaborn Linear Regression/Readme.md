@@ -65,10 +65,12 @@ with sns.axes_style('darkgrid')
 ## Floor Division: A Trick to Convert Years to Decades
 
 <img width="1135" alt="image" src="https://user-images.githubusercontent.com/98913678/159178903-2a8a466c-9216-47e7-aa06-865ebe88233b.png">
+
 ```
 1991 // 10 = 199
 199 * 10 = 1990
 ```
+
 
 <img width="1019" alt="Screen Shot 2022-03-20 at 3 15 32 PM" src="https://user-images.githubusercontent.com/98913678/159178919-7b26f76b-2676-4c6a-a13b-e0cc014223b6.png">
 
