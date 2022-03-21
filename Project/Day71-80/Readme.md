@@ -6,6 +6,10 @@ Proeject List in order by Learning Day:
 2. Google Trends Data Viz
 3. Google Play Store Project
 4. Computation with NumPy
+5. Seaborn Linear Regression
+6. Nobel Prize Analysis
+7. Dr Semmelweis Analysis
+8. 
 
 ## Concepts Used in Day71 - Day80
 
