@@ -1,4 +1,4 @@
-# U-Python-100-Days (Updating 79/80)
+# U-Python-100-Days
 
 Hello guys! This is my Python learning progress from this course.
 
