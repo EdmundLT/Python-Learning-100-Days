@@ -69,7 +69,7 @@ window = Tk()
 window.title("Password Manager")
 window.config(pady=50, padx=50,)
 canvas = Canvas(width=200, height=200, highlightthickness=0)
-lock = PhotoImage(file="logo.png")
+lock = PhotoImage(file="Project/Day16-30/Day 30 Password Manager (JSON)(Tkinter)(pyperclip)/logo.png")
 canvas.create_image(100, 100, image=lock)
 canvas.grid(row=0, column=1)
 # Label
