@@ -9,7 +9,6 @@ Proeject List in order by Learning Day:
 5. Seaborn Linear Regression
 6. Nobel Prize Analysis
 7. Dr Semmelweis Analysis
-8. 
 
 ## Concepts Used in Day71 - Day80
 
